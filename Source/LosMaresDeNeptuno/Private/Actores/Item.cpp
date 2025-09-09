@@ -15,7 +15,7 @@ AItem::AItem()
 void AItem::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	MostrarMensaje();
 }
 
 // Called every frame
@@ -23,5 +23,17 @@ void AItem::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+void AItem::MostrarMensaje()
+{
+	if (GEngine) {
+		GEngine->AddOnScreenDebugMessage(
+			-1,
+			5.f,
+			FColor::Blue,
+			FString::Printf(TEXT("Hola"))
+		);
+	}
 }
 

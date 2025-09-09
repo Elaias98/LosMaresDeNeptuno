@@ -18,11 +18,14 @@ public:
 
 	int salud;
 
+	UFUNCTION()
+	void MostrarMensaje();
+
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-
-	
-
 };
+
+ 

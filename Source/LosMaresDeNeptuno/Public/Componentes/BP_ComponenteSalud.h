@@ -25,7 +25,7 @@ public:
 	int GetSaludMaxima();
 
 	UPROPERTY(EditAnywhere)
-	int SaludMaxima;
+	float SaludMaxima;
 
 	UPROPERTY(EditAnywhere)
 	int SaludActual;

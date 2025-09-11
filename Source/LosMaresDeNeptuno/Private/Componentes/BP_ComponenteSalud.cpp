@@ -35,7 +35,7 @@ void UBP_ComponenteSalud::TickComponent(float DeltaTime, ELevelTick TickType, FA
 
 int UBP_ComponenteSalud::GetSaludMaxima()
 {
-	return SaludMaxima;
+	return static_cast<float>(SaludMaxima);
 }
 
 //void UBP_ComponenteSalud::DisminuirSalud()

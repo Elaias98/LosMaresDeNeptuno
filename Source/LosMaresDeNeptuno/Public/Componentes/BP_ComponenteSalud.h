@@ -20,15 +20,15 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+
 	UFUNCTION(BlueprintCallable)
-	/*void DisminuirSalud();*/
-	int GetSaludMaxima();
+	float VidaPersonaje(float DanioRecibido, float VidaInicial);
 
 	UPROPERTY(EditAnywhere)
 	float SaludMaxima;
 
 	UPROPERTY(EditAnywhere)
-	int SaludActual;
+	float SaludActual;
 
 protected:
 	// Called when the game starts

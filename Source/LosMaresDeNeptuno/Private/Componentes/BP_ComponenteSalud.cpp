@@ -33,13 +33,12 @@ void UBP_ComponenteSalud::TickComponent(float DeltaTime, ELevelTick TickType, FA
 	// ...
 }
 
-int UBP_ComponenteSalud::GetSaludMaxima()
+float UBP_ComponenteSalud::VidaPersonaje(float DanioRecibido, float VidaInicial)
 {
-	return static_cast<float>(SaludMaxima);
+	VidaInicial -= DanioRecibido;
+	return VidaInicial;
 }
 
-//void UBP_ComponenteSalud::DisminuirSalud()
-//{
-//	
-//}
+
+
 

@@ -1,15 +1,15 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 
-#include "LosMaresDeNeptunoPlayerController.h"
+#include "LosMaresdeNeptunoPlayerController.h"
 #include "EnhancedInputSubsystems.h"
 #include "Engine/LocalPlayer.h"
 #include "InputMappingContext.h"
 #include "Blueprint/UserWidget.h"
-#include "LosMaresDeNeptuno.h"
+#include "LosMaresdeNeptuno.h"
 #include "Widgets/Input/SVirtualJoystick.h"
 
-void ALosMaresDeNeptunoPlayerController::BeginPlay()
+void ALosMaresdeNeptunoPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
 
@@ -26,14 +26,14 @@ void ALosMaresDeNeptunoPlayerController::BeginPlay()
 
 		} else {
 
-			UE_LOG(LogLosMaresDeNeptuno, Error, TEXT("Could not spawn mobile controls widget."));
+			UE_LOG(LogLosMaresdeNeptuno, Error, TEXT("Could not spawn mobile controls widget."));
 
 		}
 
 	}
 }
 
-void ALosMaresDeNeptunoPlayerController::SetupInputComponent()
+void ALosMaresdeNeptunoPlayerController::SetupInputComponent()
 {
 	Super::SetupInputComponent();
 

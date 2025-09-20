@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class LosMaresDeNeptuno : ModuleRules
+public class LosMaresdeNeptuno : ModuleRules
 {
-	public LosMaresDeNeptuno(ReadOnlyTargetRules Target) : base(Target)
+	public LosMaresdeNeptuno(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
@@ -24,20 +24,20 @@ public class LosMaresDeNeptuno : ModuleRules
 		PrivateDependencyModuleNames.AddRange(new string[] { });
 
 		PublicIncludePaths.AddRange(new string[] {
-			"LosMaresDeNeptuno",
-			"LosMaresDeNeptuno/Variant_Platforming",
-			"LosMaresDeNeptuno/Variant_Platforming/Animation",
-			"LosMaresDeNeptuno/Variant_Combat",
-			"LosMaresDeNeptuno/Variant_Combat/AI",
-			"LosMaresDeNeptuno/Variant_Combat/Animation",
-			"LosMaresDeNeptuno/Variant_Combat/Gameplay",
-			"LosMaresDeNeptuno/Variant_Combat/Interfaces",
-			"LosMaresDeNeptuno/Variant_Combat/UI",
-			"LosMaresDeNeptuno/Variant_SideScrolling",
-			"LosMaresDeNeptuno/Variant_SideScrolling/AI",
-			"LosMaresDeNeptuno/Variant_SideScrolling/Gameplay",
-			"LosMaresDeNeptuno/Variant_SideScrolling/Interfaces",
-			"LosMaresDeNeptuno/Variant_SideScrolling/UI"
+			"LosMaresdeNeptuno",
+			"LosMaresdeNeptuno/Variant_Platforming",
+			"LosMaresdeNeptuno/Variant_Platforming/Animation",
+			"LosMaresdeNeptuno/Variant_Combat",
+			"LosMaresdeNeptuno/Variant_Combat/AI",
+			"LosMaresdeNeptuno/Variant_Combat/Animation",
+			"LosMaresdeNeptuno/Variant_Combat/Gameplay",
+			"LosMaresdeNeptuno/Variant_Combat/Interfaces",
+			"LosMaresdeNeptuno/Variant_Combat/UI",
+			"LosMaresdeNeptuno/Variant_SideScrolling",
+			"LosMaresdeNeptuno/Variant_SideScrolling/AI",
+			"LosMaresdeNeptuno/Variant_SideScrolling/Gameplay",
+			"LosMaresdeNeptuno/Variant_SideScrolling/Interfaces",
+			"LosMaresdeNeptuno/Variant_SideScrolling/UI"
 		});
 
 		// Uncomment if you are using Slate UI

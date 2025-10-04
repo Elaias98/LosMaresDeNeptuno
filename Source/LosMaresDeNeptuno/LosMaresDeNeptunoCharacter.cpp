@@ -1,6 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "LosMaresdeNeptunoCharacter.h"
+#include "LosMaresDeNeptunoCharacter.h"
 #include "Engine/LocalPlayer.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -10,9 +10,9 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
-#include "LosMaresdeNeptuno.h"
+#include "LosMaresDeNeptuno.h"
 
-ALosMaresdeNeptunoCharacter::ALosMaresdeNeptunoCharacter()
+ALosMaresDeNeptunoCharacter::ALosMaresDeNeptunoCharacter()
 {
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
@@ -50,7 +50,7 @@ ALosMaresdeNeptunoCharacter::ALosMaresdeNeptunoCharacter()
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
 }
 
-void ALosMaresdeNeptunoCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+void ALosMaresDeNeptunoCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	// Set up action bindings
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent)) {
@@ -60,19 +60,19 @@ void ALosMaresdeNeptunoCharacter::SetupPlayerInputComponent(UInputComponent* Pla
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
 
 		// Moving
-		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ALosMaresdeNeptunoCharacter::Move);
-		EnhancedInputComponent->BindAction(MouseLookAction, ETriggerEvent::Triggered, this, &ALosMaresdeNeptunoCharacter::Look);
+		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ALosMaresDeNeptunoCharacter::Move);
+		EnhancedInputComponent->BindAction(MouseLookAction, ETriggerEvent::Triggered, this, &ALosMaresDeNeptunoCharacter::Look);
 
 		// Looking
-		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ALosMaresdeNeptunoCharacter::Look);
+		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ALosMaresDeNeptunoCharacter::Look);
 	}
 	else
 	{
-		UE_LOG(LogLosMaresdeNeptuno, Error, TEXT("'%s' Failed to find an Enhanced Input component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."), *GetNameSafe(this));
+		UE_LOG(LogLosMaresDeNeptuno, Error, TEXT("'%s' Failed to find an Enhanced Input component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."), *GetNameSafe(this));
 	}
 }
 
-void ALosMaresdeNeptunoCharacter::Move(const FInputActionValue& Value)
+void ALosMaresDeNeptunoCharacter::Move(const FInputActionValue& Value)
 {
 	// input is a Vector2D
 	FVector2D MovementVector = Value.Get<FVector2D>();
@@ -81,7 +81,7 @@ void ALosMaresdeNeptunoCharacter::Move(const FInputActionValue& Value)
 	DoMove(MovementVector.X, MovementVector.Y);
 }
 
-void ALosMaresdeNeptunoCharacter::Look(const FInputActionValue& Value)
+void ALosMaresDeNeptunoCharacter::Look(const FInputActionValue& Value)
 {
 	// input is a Vector2D
 	FVector2D LookAxisVector = Value.Get<FVector2D>();
@@ -90,7 +90,7 @@ void ALosMaresdeNeptunoCharacter::Look(const FInputActionValue& Value)
 	DoLook(LookAxisVector.X, LookAxisVector.Y);
 }
 
-void ALosMaresdeNeptunoCharacter::DoMove(float Right, float Forward)
+void ALosMaresDeNeptunoCharacter::DoMove(float Right, float Forward)
 {
 	if (GetController() != nullptr)
 	{
@@ -110,7 +110,7 @@ void ALosMaresdeNeptunoCharacter::DoMove(float Right, float Forward)
 	}
 }
 
-void ALosMaresdeNeptunoCharacter::DoLook(float Yaw, float Pitch)
+void ALosMaresDeNeptunoCharacter::DoLook(float Yaw, float Pitch)
 {
 	if (GetController() != nullptr)
 	{
@@ -120,13 +120,13 @@ void ALosMaresdeNeptunoCharacter::DoLook(float Yaw, float Pitch)
 	}
 }
 
-void ALosMaresdeNeptunoCharacter::DoJumpStart()
+void ALosMaresDeNeptunoCharacter::DoJumpStart()
 {
 	// signal the character to jump
 	Jump();
 }
 
-void ALosMaresdeNeptunoCharacter::DoJumpEnd()
+void ALosMaresDeNeptunoCharacter::DoJumpEnd()
 {
 	// signal the character to stop jumping
 	StopJumping();

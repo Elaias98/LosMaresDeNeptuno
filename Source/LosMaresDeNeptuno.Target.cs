@@ -3,13 +3,13 @@
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class LosMaresdeNeptunoTarget : TargetRules
+public class LosMaresDeNeptunoTarget : TargetRules
 {
-	public LosMaresdeNeptunoTarget(TargetInfo Target) : base(Target)
+	public LosMaresDeNeptunoTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V5;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_6;
-		ExtraModuleNames.Add("LosMaresdeNeptuno");
+		ExtraModuleNames.Add("LosMaresDeNeptuno");
 	}
 }

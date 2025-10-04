@@ -4,20 +4,20 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-#include "LosMaresdeNeptunoGameMode.generated.h"
+#include "LosMaresDeNeptunoGameMode.generated.h"
 
 /**
  *  Simple GameMode for a third person game
  */
 UCLASS(abstract)
-class ALosMaresdeNeptunoGameMode : public AGameModeBase
+class ALosMaresDeNeptunoGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 
 public:
 	
 	/** Constructor */
-	ALosMaresdeNeptunoGameMode();
+	ALosMaresDeNeptunoGameMode();
 };
 
 

@@ -10,7 +10,7 @@
 #include "Engine/LocalPlayer.h"
 #include "Engine/World.h"
 #include "Blueprint/UserWidget.h"
-#include "LosMaresdeNeptuno.h"
+#include "LosMaresDeNeptuno.h"
 #include "Widgets/Input/SVirtualJoystick.h"
 
 void ASideScrollingPlayerController::BeginPlay()
@@ -30,7 +30,7 @@ void ASideScrollingPlayerController::BeginPlay()
 
 		} else {
 
-			UE_LOG(LogLosMaresdeNeptuno, Error, TEXT("Could not spawn mobile controls widget."));
+			UE_LOG(LogLosMaresDeNeptuno, Error, TEXT("Could not spawn mobile controls widget."));
 
 		}
 

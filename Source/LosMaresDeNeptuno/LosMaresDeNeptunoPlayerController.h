@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
-#include "LosMaresdeNeptunoPlayerController.generated.h"
+#include "LosMaresDeNeptunoPlayerController.generated.h"
 
 class UInputMappingContext;
 class UUserWidget;
@@ -14,7 +14,7 @@ class UUserWidget;
  *  Manages input mappings
  */
 UCLASS(abstract)
-class ALosMaresdeNeptunoPlayerController : public APlayerController
+class ALosMaresDeNeptunoPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 	

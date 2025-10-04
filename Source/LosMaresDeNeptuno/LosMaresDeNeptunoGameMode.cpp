@@ -1,8 +1,8 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "LosMaresdeNeptunoGameMode.h"
+#include "LosMaresDeNeptunoGameMode.h"
 
-ALosMaresdeNeptunoGameMode::ALosMaresdeNeptunoGameMode()
+ALosMaresDeNeptunoGameMode::ALosMaresDeNeptunoGameMode()
 {
 	// stub
 }

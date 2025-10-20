@@ -1,15 +1,16 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
-
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class LosMaresdeNeptunoEditorTarget : TargetRules
+// La clase Target del Editor
+public class LosMaresDeNeptunoEditorTarget : TargetRules
 {
-	public LosMaresdeNeptunoEditorTarget(TargetInfo Target) : base(Target)
-	{
-		Type = TargetType.Editor;
-		DefaultBuildSettings = BuildSettingsVersion.V5;
-		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_6;
-		ExtraModuleNames.Add("LosMaresdeNeptuno");
-	}
+    public LosMaresDeNeptunoEditorTarget(TargetInfo Target) : base(Target)
+    {
+        Type = TargetType.Editor; // Tipo debe ser Editor
+        DefaultBuildSettings = BuildSettingsVersion.V5;
+        IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3;
+
+        // El nombre del módulo principal del proyecto
+        ExtraModuleNames.AddRange(new string[] { "LosMaresDeNeptuno" });
+    }
 }

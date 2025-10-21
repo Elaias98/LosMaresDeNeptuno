@@ -8,7 +8,8 @@
 
 #include "Lan_Coneccion.generated.h"
 
-class UButton; 
+class UButton;
+class UTextBlock;
 {
 public:
 	
@@ -22,10 +23,25 @@ class LOSMARESDENEPTUNO_API ULan_Coneccion : public UUserWidget
 	GENERATED_BODY()
 
 
+
 public:
+	virtual void NativeOnInitialize() override;
 
 private:
+ UPROPERTY(meta=(BindWidget))
+ TObjectPtr<UButton>Button_Hostear;
+ 
+ UPROPERTY(meta=(BindWidget))
+	TObjectPtr<UButton>Button_Unirse;
 
-	TObjectPtr<UButton>	Button;
+	UPROPERTY(meta=(BindWidget))
+	TObjectPtr<UEditableTextBox>UEditableTextBox_DireccionIP;
+
+	UPROPERTY(EditInstanceOnly)
+	TSoftObjectPtr<UWorld>Level;
+	UFUNCTION()
+	void OnButton_HostearClicked();
+	UFUNCTION()
+	void onButton_Unirse_Clicked();
 	
 };
